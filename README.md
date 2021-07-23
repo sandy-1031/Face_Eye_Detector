@@ -1,4 +1,4 @@
-"# Real_Time_Detection" 
+# Real_Time_Detection
 ## OpenCV program to detect face in real time import libraries of python where its functionality resides
 ### Haar_Cascade is a Machine learning based approach where lot of sample images are used to train the classifier.
 Training the Classifier, using haar-cascade by giving positive and negative images.
