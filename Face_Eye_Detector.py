@@ -1,30 +1,19 @@
-# OpenCV program to detect face in real time
-# import libraries of python OpenCV
-# where its functionality resides
+
 import cv2
 
-# load the required trained XML classifiers
-# https://github.com/Itseez/opencv/blob/master/
-# data/haarcascades/haarcascade_frontalface_default.xml
-# Trained XML classifiers describes some features of some
-# object we want to detect a cascade function is trained
-# from a lot of positive(faces) and negative(non-faces)
-# images.
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
-# https://github.com/Itseez/opencv/blob/master
-# /data/haarcascades/haarcascade_eye.xml
-# Trained XML file for detecting eyes
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 # capture frames from a camera
+# can either give the path for the video, or 
+# can access the real time video by entering zero and accessing the real time view of camera
 cap = cv2.VideoCapture(0)
 
 # loop runs if capturing has been initialized.
-while 1:
+while True:
 
 	# reads frames from a camera
-	ret, img = cap.read()
+	ret, img = cap.read()	 ##### img variable will capture the video and ret variable will tell us weather it was captured successfull
 
 	# convert to gray scale of each frames
 	gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
